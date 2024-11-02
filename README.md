@@ -1,50 +1,38 @@
-# React + TypeScript + Vite
+# Task Manager App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Esta es una aplicación de gestión de tareas simple desarrollada con **React**, **Vite.js**, y **Material UI**.
 
-Currently, two official plugins are available:
+## Descripción
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+La aplicación permite a los usuarios:
+- Ver una lista de tareas.
+- Agregar nuevas tareas.
+- Marcar tareas como completadas.
+- Eliminar tareas.
+- Las tareas persisten entre recargas mediante `localStorage`.
 
-## Expanding the ESLint configuration
+Además, la aplicación utiliza una API externa para cargar una lista inicial de tareas y cuenta con paginación.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Tecnologías utilizadas
 
-- Configure the top-level `parserOptions` property like this:
+- **React** - Biblioteca de JavaScript para construir interfaces de usuario.
+- **Vite.js** - Herramienta de desarrollo rápida para proyectos de frontend.
+- **Material UI** - Biblioteca de componentes de UI de React para diseños modernos y responsivos.
+- **TypeScript** - Lenguaje para mejorar la productividad y la seguridad en el desarrollo.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Requisitos previos
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Asegúrate de tener instalados:
+- [Node.js](https://nodejs.org/) (versión 14 o superior)
+- [Git](https://git-scm.com/)
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Instrucciones de instalación
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+1. **Clonar el repositorio**
+
+   ```bash
+   git clone https://github.com/tu-usuario/nombre-del-repo.git
+   cd task-manager
+   npm install
+   npm run dev
+ 
