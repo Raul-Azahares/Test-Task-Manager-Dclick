@@ -1,0 +1,81 @@
+
+:root {
+  --font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --primary-color: #1976d2;
+  --bg-color: #f5f5f5;
+  --text-color: #333;
+  --text-color-light: #fff;
+}
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+a:hover {
+  color: darken(var(--primary-color), 10%);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+/* Contenedor principal */
+#root {
+  width: 100%;
+  max-width: 600px;
+  padding: 2rem;
+}
+
+/* Estilos de botones */
+button {
+  padding: 0.5em 1em;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--primary-color);
+  color: var(--text-color-light);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+button:hover {
+  background-color: #155a9c;
+  color: var(--text-color-light);
+}
+button:focus {
+  outline: 2px solid darken(var(--primary-color), 20%);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-color: #ffffff;
+    --text-color: #213547;
+    --primary-color: #646cff;
+  }
+}
